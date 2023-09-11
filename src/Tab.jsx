@@ -42,12 +42,12 @@ const Tab = () => {
       </div>
       {/* tab list */}
       <ul className="scroll flex max-h-[300px] flex-col gap-y-6 overflow-y-auto border-gray-700 pt-4 ">
-        {tabData.map((data, index) =>
+        {tabData.map((data, key) =>
           data.map((list, index) => (
             <li
               key={index}
               className={`duration-300 transition-opacity cursor-default  items-center px-4 ${
-                index === activeNav ? "flex fade-in" : "opacity-0 hidden"
+                key === activeNav ? "flex fade-in" : "opacity-0 hidden"
               }`}
             >
               <div>
